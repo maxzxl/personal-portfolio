@@ -1,45 +1,45 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Page() {
   return (
     <>
-      <p className="text-center text-green-500">Hi Mom!</p>
-      <h1 className="bg-blue-500 mt-10 p-5">Finde Kevin G...</h1>
-      <button onClick={() => link()} className="bg-blue-500 mt-10 p-5">
-        A
-      </button>
+      <main className="w-screen h-screen relative">
+        <div className="flex items-center w-full h-full bg-cover bg-center">
+          <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
+            <h1 className="text-[50px] text-white font-semibold">
+              Maximilian Zoladz, currently studying
+              <br></br>
+              <a
+                href="https://www.w-hs.de/wirtschaftsinformatik-ge/"
+                target="_blank"
+              >
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-bold">
+                  business informatics
+                </span>
+              </a>
+            </h1>
+            <div className="flex-col md:flex-row hidden md:flex gap-5">
+              <Link
+                href="/contact-me"
+                className="rounded-[20px] group relative bg-gradient-to-r from-slate-700 to-slate-900 px-5 py-3 text-lg text-white max-w-[200px]"
+              >
+                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hover:opacity-20" />
+                Contact Me
+              </Link>
 
-      <button onClick={() => link2()} className="bg-red-500 mt-10 p-5">
-        B
-      </button>
-
-      <button onClick={() => link3()} className="bg-green-500 mt-10 p-5">
-        C
-      </button>
+              <Link
+                href="/projects"
+                className="rounded-[20px] group relative bg-transparent border border-white px-5 py-3 text-lg text-white max-w-[200px]"
+              >
+                <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hover:opacity-20" />
+                My Projects
+              </Link>
+            </div>
+          </div>
+        </div>
+      </main>
     </>
-  );
-}
-
-function click() {
-  const h1 = document.getElementById("Hallo");
-  h1.innerText = "Niemals Gemüse";
-  console.log(h1);
-}
-
-function link() {
-  window.open(
-    "https://64.media.tumblr.com/4c98bd5876c29e2c921a1c4b775fccac/6ad220157aceebb7-4b/s1280x1920/92b9e2f566d02d53aab6342c52927a4400e8586d.jpg"
-  );
-}
-
-function link2() {
-  window.open(
-    "https://i1.sndcdn.com/artworks-1euZJtyUr7EEXu3b-ft0vgA-t500x500.jpg"
-  );
-}
-
-function link3() {
-  window.open(
-    "https://bandofoutsiders.com/wp-content/uploads/2024/01/Kevin-G-Age-1-1-1.jpg"
   );
 }
